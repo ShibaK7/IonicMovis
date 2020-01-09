@@ -1,55 +1,140 @@
-import { Component } from '@angular/core';
-import { AlertController } from '@ionic/angular';
+import {Component} from '@angular/core';
+import {AlertController} from '@ionic/angular';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+    selector: 'app-home',
+    templateUrl: 'home.page.html',
+    styleUrls: ['home.page.scss'],
 })
 export class HomePage {
 
-  cardsData = [
-    {
-      title: 'Titulo 1', 
-      subtitle: 'Subtitulo 1',
-      contentText:'Texto 1'    
-    },
-    {
-      title: 'Titulo 2', 
-      subtitle: 'Subtitulo 2',
-      contentText:'Texto 2'    
-    },
-    {
-      title: 'Titulo 3', 
-      subtitle: 'Subtitulo 3',
-      contentText:'Texto 3'    
+    cardsData = [
+        {
+            title: 'Hola equipo',
+            subtitle: 'El agua esta bien',
+            contentText: `Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Cupiditate,
+            nam quidem. Adipisci aliquam eaque hic nulla
+            suscipit. Assumenda atque consequuntur esse eum
+             maxime mollitia obcaecati repellendus vel veritatis
+             voluptate. Fugit.`
+        },
+        {
+            title: 'Hola equipo 2',
+            subtitle: 'El agua esta bien',
+            contentText: `Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Cupiditate,
+            nam quidem. Adipisci aliquam eaque hic nulla
+            suscipit. Assumenda atque consequuntur esse eum
+             maxime mollitia obcaecati repellendus vel veritatis
+             voluptate. Fugit.`
+        },
+        {
+            title: 'Hola equipo 3',
+            subtitle: 'El agua esta bien',
+            contentText: `Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Cupiditate,
+            nam quidem. Adipisci aliquam eaque hic nulla
+            suscipit. Assumenda atque consequuntur esse eum
+             maxime mollitia obcaecati repellendus vel veritatis
+             voluptate. Fugit.`
+        },
+        {
+            title: 'Hola equipo 3',
+            subtitle: 'El agua esta bien',
+            contentText: `Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Cupiditate,
+            nam quidem. Adipisci aliquam eaque hic nulla
+            suscipit. Assumenda atque consequuntur esse eum
+             maxime mollitia obcaecati repellendus vel veritatis
+             voluptate. Fugit.`
+        },
+        {
+            title: 'Hola equipo 3',
+            subtitle: 'El agua esta bien',
+            contentText: `Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Cupiditate,
+            nam quidem. Adipisci aliquam eaque hic nulla
+            suscipit. Assumenda atque consequuntur esse eum
+             maxime mollitia obcaecati repellendus vel veritatis
+             voluptate. Fugit.`
+        },
+        {
+            title: 'Hola equipo 3',
+            subtitle: 'El agua esta bien',
+            contentText: `Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Cupiditate,
+            nam quidem. Adipisci aliquam eaque hic nulla
+            suscipit. Assumenda atque consequuntur esse eum
+             maxime mollitia obcaecati repellendus vel veritatis
+             voluptate. Fugit.`
+        },
+        {
+            title: 'Hola equipo 3',
+            subtitle: 'El agua esta bien',
+            contentText: `Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Cupiditate,
+            nam quidem. Adipisci aliquam eaque hic nulla
+            suscipit. Assumenda atque consequuntur esse eum
+             maxime mollitia obcaecati repellendus vel veritatis
+             voluptate. Fugit.`
+        },
+        {
+            title: 'Hola equipo 3',
+            subtitle: 'El agua esta bien',
+            contentText: `Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Cupiditate,
+            nam quidem. Adipisci aliquam eaque hic nulla
+            suscipit. Assumenda atque consequuntur esse eum
+             maxime mollitia obcaecati repellendus vel veritatis
+             voluptate. Fugit.`
+        },
+        {
+            title: 'Hola equipo 3',
+            subtitle: 'El agua esta bien',
+            contentText: `Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Cupiditate,
+            nam quidem. Adipisci aliquam eaque hic nulla
+            suscipit. Assumenda atque consequuntur esse eum
+             maxime mollitia obcaecati repellendus vel veritatis
+             voluptate. Fugit.`
+        },
+        {
+            title: 'Hola equipo 3',
+            subtitle: 'El agua esta bien',
+            contentText: `Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Cupiditate,
+            nam quidem. Adipisci aliquam eaque hic nulla
+            suscipit. Assumenda atque consequuntur esse eum
+             maxime mollitia obcaecati repellendus vel veritatis
+             voluptate. Fugit.`
+        }
+    ];
+
+    constructor(private alertController: AlertController) {
     }
-  ];
 
-  constructor(private alertController: AlertController) { }
+    onBeerClicked() {
+        console.log('quiero una no tan fria!');
+    }
 
-  onBeerClicked(){
-    console.log("Quiero una no tan fría");
-  }
-
-  openAlert() {
-    this.alertController.create({
-        header: 'Hello world!',
-        subHeader: '¡Los baños estan mas limpios ahora!',
-        buttons: [
-            {
-                text: 'Cerrar',
-                handler: () => {
-                    console.log('bye bye!');
+    openAlert() {
+        this.alertController.create({
+            header: 'Hello world!',
+            subHeader: '¡Los baños estan mas limpios ahora!',
+            buttons: [
+                {
+                    text: 'Cerrar',
+                    handler: () => {
+                        console.log('bye bye!');
+                    }
                 }
-            }
-        ]
-    }).then(alert => {
-        return alert.present();
-    }).then(() => {
-        console.log('ya se terminó de abrir 100% seguro');
-    });
+            ]
+        }).then(alert => {
+            return alert.present();
+        }).then(() => {
+            console.log('ya se terminó de abrir 100% seguro');
+        });
 
-}
-  
+    }
 }
